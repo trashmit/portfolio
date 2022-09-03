@@ -1,0 +1,306 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+ body {
+    overflow-x: hidden;
+ }
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #08080b;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 75px;
+}
+
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav .sidebarlinks {
+    line-height: 40px;
+}
+
+.sidebar-nav .sidebarlinks a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav .sidebarlinks a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav .sidebarlinks a:active,
+.sidebar-nav .sidebarlinks a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+.bg-dark{
+    background-color: #0e0d12!important;
+}
+
+.tablecontainer{
+    background-color: #08080b;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 500px;
+    padding: 0px!important;
+}
+
+.tablecontainer2{
+    background-color: #08080b;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    min-height: 500px;
+    padding: 0px!important;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+
+
+table {
+  background: #08080b;
+  border-radius: 0.25em;
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+
+  border-bottom: 1px solid #364043;
+  color: #E2B842;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding:  1em;
+  text-align: left;
+}
+td {
+
+  color: #fff;
+  font-weight: 400;
+  padding:  1em;
+  
+}
+.disabled td {
+  color: #4F5F64;
+}
+tbody tr {
+  transition: background 0.25s ease;
+}
+tbody tr:hover {
+  background: #0e0d12;
+}
+
+
+
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1c1c27;
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 20px;
+  border: 1px solid #08080b;
+}
+
+
+#menu-toggle{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.tokenimg{
+    width: 48px;
+}
+
+.tablecontainer2 svg{
+    position: absolute;
+    bottom: 0px;
+    height: 110%;
+}
+
+.balance{
+    z-index: 1000;
+    font-size: 350%;
+}
+
+@media screen and (max-width: 35.5em) {
+    table {
+      display: block;
+      text-align: center;
+    }
+    table > *, table tr, table td, table th {
+      display: block;
+    }
+    table thead {
+      display: none;
+    }
+    table tbody tr {
+      height: auto;
+    }
+    table tbody tr td {
+      margin-bottom: 12px;
+      border-top: 1px solid #364043;
+    }
+    table tbody tr td:last-child {
+      margin-bottom: 0;
+    }
+    table tbody tr td:before {
+      position: absolute;
+      font-weight: 700;
+      width: 40%;
+      top: 0;
+    }
+    .tokenimg{
+        display: none;
+    }
+    .tag1 span {
+        color: #E2B842;
+        display: none;
+      }
+    .tag1:after{
+        color: #E2B842;
+        content: "ASSET:";
+    }
+
+    .tag2 span {
+        color: #E2B842;
+        display: none;
+      }
+    .tag2:after{
+        color: #E2B842;
+        content: "PRICE";
+    }
+
+    .tag3 span {
+        
+        display: none;
+      }
+    .tag3:after{
+        color: #E2B842;
+        content: "BALANCE:";
+    }
+
+    .tag4 span {
+        
+        display: none;
+      }
+    .tag4:after{
+        color: #E2B842;
+        content: "VALUE:";
+    }
+
+    
+  }
+  .btn:focus {
+    outline: none;
+    box-shadow: none;
+  }

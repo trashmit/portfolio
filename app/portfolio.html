@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <base href="http://127.0.0.1:8000">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+    <link rel="stylesheet" href="/app/portfolio.css">
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+  </head>
+  <body class="bg-dark text-white" >
+    <div id="wrapper">
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class=" px-5">
+            <div class="dropdown my-4 ">
+              <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="/app/pfp.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>User</strong>
+                <h1></h1>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark text-small shadow bg-dark" aria-labelledby="dropdownUser1" style="">
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="px-2 sidebarlinks">
+            <a href="/" class="ps-5">Home</a>
+          </li>
+          <li class="px-2 sidebarlinks">
+            <a href="/portfolio/" class="ps-5">Portfolio</a>
+          </li>
+          <li class="px-2 sidebarlinks">
+            <a href="/keys/" class="ps-5">Keys</a>
+          </li>
+          <li class="px-2 sidebarlinks">
+            <a href="/chart/" class="ps-5">Analytics</a>
+          </li>
+          <li class="px-2 sidebarlinks">
+            <a class="ps-5">NFTs</a>
+          </li>
+        </ul>
+      </div>
+      <div id="page-content-wrapper">
+        <div class="container-fluid a d-flex justify-content-center align-items-center">
+          <a href="#menu-toggle" class="btn" id="menu-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            </a>
+          <div class="container-fluid">
+            <div class="row g-4">
+              <div class="col-12 p-5 tablecontainer2 graph d-flex justify-content-center align-items-center" style="position: relative;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1c1c27" fill-opacity="1" d="M0,160L6.2,149.3C12.3,139,25,117,37,128C49.2,139,62,181,74,165.3C86.2,149,98,75,111,85.3C123.1,96,135,192,148,213.3C160,235,172,181,185,144C196.9,107,209,85,222,101.3C233.8,117,246,171,258,186.7C270.8,203,283,181,295,149.3C307.7,117,320,75,332,85.3C344.6,96,357,160,369,197.3C381.5,235,394,245,406,240C418.5,235,431,213,443,181.3C455.4,149,468,107,480,117.3C492.3,128,505,192,517,224C529.2,256,542,256,554,224C566.2,192,578,128,591,133.3C603.1,139,615,213,628,224C640,235,652,181,665,133.3C676.9,85,689,43,702,26.7C713.8,11,726,21,738,48C750.8,75,763,117,775,122.7C787.7,128,800,96,812,96C824.6,96,837,128,849,160C861.5,192,874,224,886,208C898.5,192,911,128,923,106.7C935.4,85,948,107,960,149.3C972.3,192,985,256,997,272C1009.2,288,1022,256,1034,250.7C1046.2,245,1058,267,1071,240C1083.1,213,1095,139,1108,101.3C1120,64,1132,64,1145,106.7C1156.9,149,1169,235,1182,234.7C1193.8,235,1206,149,1218,112C1230.8,75,1243,85,1255,85.3C1267.7,85,1280,75,1292,101.3C1304.6,128,1317,192,1329,202.7C1341.5,213,1354,171,1366,176C1378.5,181,1391,235,1403,224C1415.4,213,1428,139,1434,101.3L1440,64L1440,320L1433.8,320C1427.7,320,1415,320,1403,320C1390.8,320,1378,320,1366,320C1353.8,320,1342,320,1329,320C1316.9,320,1305,320,1292,320C1280,320,1268,320,1255,320C1243.1,320,1231,320,1218,320C1206.2,320,1194,320,1182,320C1169.2,320,1157,320,1145,320C1132.3,320,1120,320,1108,320C1095.4,320,1083,320,1071,320C1058.5,320,1046,320,1034,320C1021.5,320,1009,320,997,320C984.6,320,972,320,960,320C947.7,320,935,320,923,320C910.8,320,898,320,886,320C873.8,320,862,320,849,320C836.9,320,825,320,812,320C800,320,788,320,775,320C763.1,320,751,320,738,320C726.2,320,714,320,702,320C689.2,320,677,320,665,320C652.3,320,640,320,628,320C615.4,320,603,320,591,320C578.5,320,566,320,554,320C541.5,320,529,320,517,320C504.6,320,492,320,480,320C467.7,320,455,320,443,320C430.8,320,418,320,406,320C393.8,320,382,320,369,320C356.9,320,345,320,332,320C320,320,308,320,295,320C283.1,320,271,320,258,320C246.2,320,234,320,222,320C209.2,320,197,320,185,320C172.3,320,160,320,148,320C135.4,320,123,320,111,320C98.5,320,86,320,74,320C61.5,320,49,320,37,320C24.6,320,12,320,6,320L0,320Z"></path></svg>
+                  <h1 class="balance" id="balance">Loading!</h1>
+              </div>
+              <div class="col-12 tablecontainer ">
+                <table id="coins">
+                  <thead>
+                    <tr>
+                      <th>ASSET</th>
+                      <th>PRICE</th>
+                      <th>BALANCE</th>
+                      <th>VALUE ($)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    <tr>
+                      <td><img src="btc.png" class="tokenimg me-3"><span class="tag1"></span> ETH</td>
+                      <td><span class="tag2"></span> 2599</td>
+                      <td><span class="tag3"></span> 0</td>
+                      <td><span class="tag4"></span> 0</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="/app/portfolio.js"></script>
+    <script>
+      $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+      });
+    </script>
+  </body>
+</html>
