@@ -5,7 +5,7 @@ Ftx = Ftx()
 import asyncio
 
 Consts = Consts()
-ADMINPASSWORD = "ADMinisduyfhas78dfyaso8df"
+ADMINPASSWORD = "SET PASSWORD"
 conn = psycopg2.connect(Consts.dbname)
 cursor = conn.cursor()
 
